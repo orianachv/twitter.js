@@ -3,7 +3,6 @@ const app = express();
 const nunjucks = require('nunjucks');
 const morgan = require('morgan');
 const routes = require('./routes');
-
 app.use('/', routes);
 app.use(express.static(__dirname + '/public'));
 app.use(function(req, res, next) {

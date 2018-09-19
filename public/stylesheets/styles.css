@@ -1,6 +1,7 @@
 html,
 body {
   height: 100%;
+  color: #0099cc;
 }
 
 #wrap {
@@ -47,3 +48,10 @@ code {
 .content .by {
   font-weight: bold;
 }
+
+/* li {
+  float: right;
+  list-style: none;
+  padding-left: 0px;
+  width: 60%;
+} */
