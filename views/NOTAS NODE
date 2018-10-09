@@ -1,0 +1,25 @@
+npm init para inicializar y crear package.json.
+en el package.json quedan guardadas las dependencias de librerías,
+y se pude agregar un script, por ejemplo: "start":"nodemon app.js",
+y con 'npm start' lo llama.
+
+///////////////////////////////////////////////////////////
+Para hacer rutas en express, las hago en index.js:
+
+const express = require('express');
+const router = express.Router();
+
+router.get('/', function(req, res){
+	let valor = 'Lo que reemplazo en variable';
+	res.render('archivoHTML', {variable : valor})
+});
+
+///////////////////////////////////////////////////////////
+app.use('/', routes);
+
+Va a la carpeta routes, y por defecto busca index.js, donde están todos los gets y posts etc.
+
+///////////////////////////////////////////////////////////
+app.use(express.static(__dirname + '/public'));
+
+Toma todo el path hasta donde está app.js, luego le indica que todo lo que esté en la carpeta 'public' tenga su propia ruta.
